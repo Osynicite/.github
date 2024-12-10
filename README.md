@@ -1,4 +1,7 @@
 # .github
+
+[中文](./README_ZH.md) | [English](./README.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) 
+
 这个仓库包含了 Osynicite 组织范围的配置和模板。它提供了在组织的所有仓库中共享的默认社区健康文件、模板和工作流程。
 
 ## 📂 仓库结构

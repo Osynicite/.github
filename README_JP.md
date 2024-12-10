@@ -1,6 +1,6 @@
 # .github
 
-[English](./README.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [中文](./README_ZH.md)
+[中文](./README_ZH.md) | [English](./README.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) 
 
 このリポジトリには、osu!のツール（ビートマップ同期、MIDIキーボードマッピング、スキン編集ユーティリティなど）を開発するオープンソースチームOsyniciteの組織全体の設定とテンプレートが含まれています。
 

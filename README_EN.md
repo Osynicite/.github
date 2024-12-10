@@ -1,6 +1,6 @@
 # .github
 
-[English](./README.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [中文](./README_ZH.md)
+[中文](./README_ZH.md) | [English](./README.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) 
 
 This repository contains organization-wide configurations and templates for Osynicite - an open-source team developing tools for osu!, including beatmap synchronization, MIDI keyboard mapping, and skin editing utilities.
 

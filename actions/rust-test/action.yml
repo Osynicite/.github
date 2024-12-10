@@ -1,0 +1,25 @@
+# .github/actions/rust-test/action.yml
+name: 'Rust Test'
+description: 'Runs Rust tests with coverage'
+inputs:
+  working-directory:
+    description: 'Directory to run tests in'
+    required: false
+    default: '.'
+runs:
+  using: "composite"
+  steps:
+    - name: Install cargo-tarpaulin
+      shell: bash
+      run: cargo install cargo-tarpaulin
+
+    - name: Run tests with coverage
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        cargo tarpaulin --ignore-tests --out Xml
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: true

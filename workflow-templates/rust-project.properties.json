@@ -1,0 +1,11 @@
+{
+    "name": "Rust Project Workflow",
+    "description": "Rust project workflow template with Cargo",
+    "iconName": "rust",
+    "categories": ["Rust", "Cargo", "Continuous Integration"],
+    "filePatterns": [
+        "^Cargo.toml$",
+        "^.*\\.rs$",
+        "^Cargo.lock$"
+    ]
+}

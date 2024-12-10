@@ -1,0 +1,24 @@
+# .github/actions/rust-setup/action.yml
+name: 'Setup Rust Environment'
+description: 'Sets up Rust with caching and common tools'
+inputs:
+  toolchain:
+    description: 'Rust toolchain to use (stable, beta, nightly)'
+    required: false
+    default: 'stable'
+outputs:
+  cache-hit:
+    description: 'Whether there was a cache hit'
+    value: ${{ steps.rust-cache.outputs.cache-hit }}
+runs:
+  using: "composite"
+  steps:
+    - uses: dtolnay/rust-toolchain@master
+      with:
+        toolchain: ${{ inputs.toolchain }}
+        components: rustfmt, clippy
+    
+    - uses: Swatinem/rust-cache@v2
+      id: rust-cache
+      with:
+        shared-key: "rust-cache"

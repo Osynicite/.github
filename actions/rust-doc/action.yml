@@ -1,0 +1,13 @@
+# .github/actions/rust-doc/action.yml
+name: 'Rust Documentation'
+description: 'Builds and validates Rust documentation'
+runs:
+  using: "composite"
+  steps:
+    - name: Build documentation
+      shell: bash
+      run: cargo doc --no-deps --all-features
+
+    - name: Check for broken internal links
+      shell: bash
+      run: cargo doc --document-private-items --no-deps --all-features

@@ -1,0 +1,15 @@
+name: Benchmark
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  benchmark:
+    name: Performance Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/rust-setup
+        with:
+          toolchain: nightly
+      - uses: ./.github/actions/rust-bench

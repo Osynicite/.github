@@ -1,0 +1,21 @@
+# .github/actions/rust-bench/action.yml
+name: 'Rust Benchmark'
+description: 'Runs and compares benchmarks'
+runs:
+  using: "composite"
+  steps:
+    - name: Install cargo-criterion
+      shell: bash
+      run: cargo install cargo-criterion
+
+    - name: Run benchmarks
+      shell: bash
+      run: cargo criterion
+
+    - name: Store benchmark result
+      uses: benchmark-action/github-action-benchmark@v1
+      with:
+        tool: 'criterion'
+        output-file-path: target/criterion/results.json
+        github-token: ${{ github.token }}
+        auto-push: true

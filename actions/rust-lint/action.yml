@@ -1,0 +1,28 @@
+# .github/actions/rust-lint/action.yml
+name: 'Rust Lint'
+description: 'Runs Rust linting tools'
+inputs:
+  working-directory:
+    description: 'Directory to run lints in'
+    required: false
+    default: '.'
+runs:
+  using: "composite"
+  steps:
+    - name: Check formatting
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        cargo fmt --all -- --check
+        
+    - name: Run clippy
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        cargo clippy --all-targets --all-features -- -D warnings
+
+    - name: Check dependencies
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        cargo audit

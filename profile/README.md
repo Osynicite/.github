@@ -7,7 +7,7 @@
 
 ## 🔗 相关链接
 
-- [Discord]([Discord链接](https://discord.gg/DRnZSES3BC))
+- [Discord](https://discord.gg/DRnZSES3BC)
 
 ## 🌟 主要项目
 

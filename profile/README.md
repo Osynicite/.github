@@ -14,6 +14,7 @@
 - [osynic_downloader](https://github.com/osynicite/osynic_downloader) - 基于[vielpork](https://github.com/islatri/vielpork)的多下载源支持的多线程 osu! 谱面下载器
 - [osynic_serializer](https://github.com/osynicite/osynic_serializer) - 基于[osynic_osudb](https://github.com/osynicite/osynic_osudb)的 osu! 谱面序列化工具
 - [osynic_osudb](https://github.com/osynicite/osynic_osudb) - osu! 谱面数据库解析工具，基于[osu-db](https://github.com/kovaxis/osu-db)重构
+- [osynic_osuapi](https://github.com/osynicite/osynic_osuapi) - 高性能, 结构优良, 拓展性好的 Rust osu! API 客户端
 - 更多项目正在开发中...敬请期待
 
 ---
